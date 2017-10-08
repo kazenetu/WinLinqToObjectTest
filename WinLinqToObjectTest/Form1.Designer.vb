@@ -29,6 +29,7 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.resultGrid = New System.Windows.Forms.DataGridView()
         Me.runWhere = New System.Windows.Forms.Button()
+        Me.runOrder = New System.Windows.Forms.Button()
         CType(Me.mainGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.subGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.resultGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,11 +107,21 @@ Partial Class Form1
         Me.runWhere.Text = "Where" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(主キーが10以上)"
         Me.runWhere.UseVisualStyleBackColor = True
         '
+        'runOrder
+        '
+        Me.runOrder.Location = New System.Drawing.Point(556, 82)
+        Me.runOrder.Name = "runOrder"
+        Me.runOrder.Size = New System.Drawing.Size(118, 34)
+        Me.runOrder.TabIndex = 7
+        Me.runOrder.Text = "Order" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(主キーの降順)"
+        Me.runOrder.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(847, 557)
+        Me.Controls.Add(Me.runOrder)
         Me.Controls.Add(Me.runWhere)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.resultGrid)
@@ -138,4 +149,5 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents resultGrid As DataGridView
     Friend WithEvents runWhere As Button
+    Friend WithEvents runOrder As Button
 End Class

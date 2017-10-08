@@ -34,4 +34,19 @@ Public Class Form1
         Me.resultGrid.DataSource = LinqSampleVB.LinqToObjectSample.WhereSample(srcMainData)
 
     End Sub
+
+    ''' <summary>
+    ''' 主キーの降順データを表示
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub runOrder_Click(sender As Object, e As EventArgs) Handles runOrder.Click
+
+        ' 元データを取得
+        Dim srcMainData = DirectCast(Me.mainGrid.DataSource, List(Of LinqToObjectTest))
+
+        ' 主キーの降順データを表示
+        Me.resultGrid.DataSource = LinqSampleVB.LinqToObjectSample.OrderSample(srcMainData)
+
+    End Sub
 End Class
