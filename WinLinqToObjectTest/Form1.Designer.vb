@@ -101,9 +101,9 @@ Partial Class Form1
         '
         Me.runWhere.Location = New System.Drawing.Point(556, 27)
         Me.runWhere.Name = "runWhere"
-        Me.runWhere.Size = New System.Drawing.Size(171, 23)
+        Me.runWhere.Size = New System.Drawing.Size(118, 34)
         Me.runWhere.TabIndex = 6
-        Me.runWhere.Text = "Where(主キーが10以上)"
+        Me.runWhere.Text = "Where" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(主キーが10以上)"
         Me.runWhere.UseVisualStyleBackColor = True
         '
         'Form1
