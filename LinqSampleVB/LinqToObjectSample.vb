@@ -4,7 +4,7 @@
 Public Class LinqToObjectSample
 
     ''' <summary>
-    ''' Whereのサンプル
+    ''' フィルタのサンプル
     ''' </summary>
     ''' <param name="src">参照元データ</param>
     ''' <returns>主キーが10以上のデータ</returns>
