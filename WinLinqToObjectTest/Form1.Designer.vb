@@ -30,6 +30,7 @@ Partial Class Form1
         Me.resultGrid = New System.Windows.Forms.DataGridView()
         Me.runWhere = New System.Windows.Forms.Button()
         Me.runOrder = New System.Windows.Forms.Button()
+        Me.runGroupJoin = New System.Windows.Forms.Button()
         CType(Me.mainGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.subGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.resultGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -116,11 +117,21 @@ Partial Class Form1
         Me.runOrder.Text = "Order" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(主キーの降順)"
         Me.runOrder.UseVisualStyleBackColor = True
         '
+        'runGroupJoin
+        '
+        Me.runGroupJoin.Location = New System.Drawing.Point(556, 136)
+        Me.runGroupJoin.Name = "runGroupJoin"
+        Me.runGroupJoin.Size = New System.Drawing.Size(118, 34)
+        Me.runGroupJoin.TabIndex = 8
+        Me.runGroupJoin.Text = "GroupJoin" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(外部結合)"
+        Me.runGroupJoin.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(847, 557)
+        Me.Controls.Add(Me.runGroupJoin)
         Me.Controls.Add(Me.runOrder)
         Me.Controls.Add(Me.runWhere)
         Me.Controls.Add(Me.Label4)
@@ -150,4 +161,5 @@ Partial Class Form1
     Friend WithEvents resultGrid As DataGridView
     Friend WithEvents runWhere As Button
     Friend WithEvents runOrder As Button
+    Friend WithEvents runGroupJoin As Button
 End Class

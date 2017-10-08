@@ -54,4 +54,21 @@ Public Class Form1
         Me.resultGrid.DataSource = LinqSampleVB.LinqToObjectSample.OrderSample(srcMainData)
 
     End Sub
+
+    ''' <summary>
+    ''' グループデータを表示
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub runGroupJoin_Click(sender As Object, e As EventArgs) Handles runGroupJoin.Click
+
+        ' 元データを取得
+        Dim srcMainData = DirectCast(Me.mainGrid.DataSource, List(Of LinqToObjectTest))
+
+        ' 元サブデータを取得
+        Dim srcSubData = DirectCast(Me.subGrid.DataSource, List(Of LinqToObjectTest))
+
+        ' グループデータを表示
+        Me.resultGrid.DataSource = LinqSampleVB.LinqToObjectSample.GroupJoinSample(srcMainData, srcSubData)
+    End Sub
 End Class
