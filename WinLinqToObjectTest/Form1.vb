@@ -17,6 +17,11 @@ Public Class Form1
         Next
         Me.mainGrid.DataSource = mainData
 
+        ' サブデータ作成
+        Dim subData = New List(Of LinqToObjectTest)()
+        subData.Add(New LinqToObjectTest(100, 1, String.Format("SubName{0}", 100), 5))
+        subData.Add(New LinqToObjectTest(101, 2, String.Format("SubName{0}", 101), 15))
+        Me.subGrid.DataSource = subData
 
     End Sub
 
