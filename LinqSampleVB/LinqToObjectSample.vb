@@ -63,4 +63,19 @@ Public Class LinqToObjectSample
 
     End Function
 
+    ''' <summary>
+    ''' グルーピングのサンプル
+    ''' </summary>
+    ''' <param name="src">参照元データ</param>
+    ''' <returns>「主キー/10」でグループされたデータ</returns>
+    Public Shared Function GroupSample(ByVal src As List(Of Commons.LinqToObjectTest)) As IEnumerable(Of Object)
+
+        Return src.GroupBy(Function(item) Math.Floor(item.PrimaryKey / 10),
+            Function(item, element) New With {
+            Key .PrimaryKeyPer10 = item.ToString(),
+            Key .Count = element.Count()
+            }).ToList()
+
+    End Function
+
 End Class
