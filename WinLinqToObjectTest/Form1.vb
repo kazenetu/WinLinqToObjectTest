@@ -87,4 +87,18 @@ Public Class Form1
         ' ジョインデータを表示
         Me.resultGrid.DataSource = LinqSampleVB.LinqToObjectSample.JoinSample(srcMainData, srcSubData)
     End Sub
+
+    ''' <summary>
+    ''' グルーピングデータを表示
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub runGroup_Click(sender As Object, e As EventArgs) Handles runGroup.Click
+
+        ' 元データを取得
+        Dim srcMainData = DirectCast(Me.mainGrid.DataSource, List(Of LinqToObjectTest))
+
+        ' グルーピングデータを表示
+        Me.resultGrid.DataSource = LinqSampleVB.LinqToObjectSample.GroupSample(srcMainData)
+    End Sub
 End Class
