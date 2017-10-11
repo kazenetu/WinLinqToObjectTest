@@ -122,6 +122,10 @@
       <Project>{fcf71094-912b-4662-a791-5297bde59df1}</Project>
       <Name>Commons</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LinqSampleCSharp\LinqSampleCSharp.csproj">
+      <Project>{575f34a2-f29b-48f8-a65d-b4436bd1aeae}</Project>
+      <Name>LinqSampleCSharp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LinqSampleVB\LinqSampleVB.vbproj">
       <Project>{3874dfe0-f338-46d1-baf5-ea9ddba035cf}</Project>
       <Name>LinqSampleVB</Name>
