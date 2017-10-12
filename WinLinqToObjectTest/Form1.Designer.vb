@@ -33,6 +33,9 @@ Partial Class Form1
         Me.runGroupJoin = New System.Windows.Forms.Button()
         Me.runJoin = New System.Windows.Forms.Button()
         Me.runGroup = New System.Windows.Forms.Button()
+        Me.runWhereCS = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.mainGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.subGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.resultGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -146,11 +149,41 @@ Partial Class Form1
         Me.runGroup.Text = "Group" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(主キー/10)"
         Me.runGroup.UseVisualStyleBackColor = True
         '
+        'runWhereCS
+        '
+        Me.runWhereCS.Location = New System.Drawing.Point(696, 27)
+        Me.runWhereCS.Name = "runWhereCS"
+        Me.runWhereCS.Size = New System.Drawing.Size(118, 34)
+        Me.runWhereCS.TabIndex = 11
+        Me.runWhereCS.Text = "Where" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(主キーが10以上)"
+        Me.runWhereCS.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(574, 9)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(45, 12)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "VB.NET"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(738, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(23, 12)
+        Me.Label5.TabIndex = 12
+        Me.Label5.Text = "C# "
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(847, 557)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.runWhereCS)
         Me.Controls.Add(Me.runGroup)
         Me.Controls.Add(Me.runJoin)
         Me.Controls.Add(Me.runGroupJoin)
@@ -186,4 +219,7 @@ Partial Class Form1
     Friend WithEvents runGroupJoin As Button
     Friend WithEvents runJoin As Button
     Friend WithEvents runGroup As Button
+    Friend WithEvents runWhereCS As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label5 As Label
 End Class

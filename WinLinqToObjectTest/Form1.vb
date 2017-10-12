@@ -25,6 +25,8 @@ Public Class Form1
 
     End Sub
 
+#Region "VB版サンプル"
+
     ''' <summary>
     ''' 主キーが10以上のデータを表示
     ''' </summary>
@@ -101,4 +103,26 @@ Public Class Form1
         ' グルーピングデータを表示
         Me.resultGrid.DataSource = LinqSampleVB.LinqToObjectSample.GroupSample(srcMainData)
     End Sub
+
+#End Region
+
+#Region "C# 版サンプル"
+
+    ''' <summary>
+    ''' 主キーが10以上のデータを表示
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub runWhereCS_Click(sender As Object, e As EventArgs) Handles runWhereCS.Click
+
+        ' 元データを取得
+        Dim srcMainData = DirectCast(Me.mainGrid.DataSource, List(Of LinqToObjectTest))
+
+        ' 主キーが10以上のデータを表示
+        Me.resultGrid.DataSource = LinqSampleCSharp.LinqToObjectSample.WhereSample(srcMainData)
+
+    End Sub
+
+#End Region
+
 End Class
