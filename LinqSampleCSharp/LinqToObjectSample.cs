@@ -20,5 +20,15 @@ namespace LinqSampleCSharp
         {
             return src.Where((item) => item.PrimaryKey >= 10).ToList();
         }
+
+        /// <summary>
+        /// ソートのサンプル
+        /// </summary>
+        /// <param name="src">参照元データ</param>
+        /// <returns>主キーの降順でソートされたデータ</returns>
+        public static List<Commons.LinqToObjectTest> OrderSample(List<Commons.LinqToObjectTest> src)
+        {
+            return src.OrderByDescending((item) => item.PrimaryKey).ToList();
+        }
     }
 }
