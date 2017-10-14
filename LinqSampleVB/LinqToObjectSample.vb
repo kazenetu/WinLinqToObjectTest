@@ -30,7 +30,7 @@ Public Class LinqToObjectSample
     ''' </summary>
     ''' <param name="src">参照元データ</param>
     ''' <param name="srcSub">参照元サブデータ</param>
-    ''' <returns>主キーの降順でソートされたデータ</returns>
+    ''' <returns>参照元データの主キーが参照元サブデータの親主キーが紐づくデータ</returns>
     Public Shared Function JoinSample(ByVal src As List(Of Commons.LinqToObjectTest), ByVal srcSub As List(Of Commons.LinqToObjectTest)) As List(Of Commons.LinqToObjectTest)
 
         Return src.Join(srcSub, Function(ByVal item As Commons.LinqToObjectTest) item.PrimaryKey,
@@ -49,7 +49,7 @@ Public Class LinqToObjectSample
     ''' </summary>
     ''' <param name="src">参照元データ</param>
     ''' <param name="srcSub">参照元サブデータ</param>
-    ''' <returns>主キーの降順でソートされたデータ</returns>
+    ''' <returns>参照元データの主キーが参照元サブデータの親主キーに存在するか否かを追加したデータ</returns>
     Public Shared Function GroupJoinSample(ByVal src As List(Of Commons.LinqToObjectTest), ByVal srcSub As List(Of Commons.LinqToObjectTest)) As IEnumerable(Of Object)
 
         Return src.GroupJoin(srcSub, Function(ByVal item As Commons.LinqToObjectTest) item.PrimaryKey,
