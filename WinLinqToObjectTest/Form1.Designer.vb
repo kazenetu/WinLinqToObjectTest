@@ -36,6 +36,7 @@ Partial Class Form1
         Me.runWhereCS = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.runOrderCS = New System.Windows.Forms.Button()
         CType(Me.mainGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.subGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.resultGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -176,6 +177,15 @@ Partial Class Form1
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "C# "
         '
+        'runOrderCS
+        '
+        Me.runOrderCS.Location = New System.Drawing.Point(696, 82)
+        Me.runOrderCS.Name = "runOrderCS"
+        Me.runOrderCS.Size = New System.Drawing.Size(118, 34)
+        Me.runOrderCS.TabIndex = 11
+        Me.runOrderCS.Text = "Order" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(主キーの降順)"
+        Me.runOrderCS.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -183,6 +193,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(847, 557)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.runOrderCS)
         Me.Controls.Add(Me.runWhereCS)
         Me.Controls.Add(Me.runGroup)
         Me.Controls.Add(Me.runJoin)
@@ -222,4 +233,5 @@ Partial Class Form1
     Friend WithEvents runWhereCS As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents runOrderCS As Button
 End Class

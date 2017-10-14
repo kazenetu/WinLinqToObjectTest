@@ -123,6 +123,21 @@ Public Class Form1
 
     End Sub
 
+    ''' <summary>
+    ''' 主キーの降順データを表示
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub runOrderCS_Click(sender As Object, e As EventArgs) Handles runOrderCS.Click
+
+        ' 元データを取得
+        Dim srcMainData = DirectCast(Me.mainGrid.DataSource, List(Of LinqToObjectTest))
+
+        ' 主キーの降順データを表示
+        Me.resultGrid.DataSource = LinqSampleCSharp.LinqToObjectSample.OrderSample(srcMainData)
+
+    End Sub
+
 #End Region
 
 End Class
