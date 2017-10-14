@@ -36,7 +36,7 @@ namespace LinqSampleCSharp
         /// </summary>
         /// <param name="src">参照元データ</param>
         /// <param name="srcSub">参照元サブデータ</param>
-        /// <returns>主キーの降順でソートされたデータ</returns>
+        /// <returns>参照元データの主キーが参照元サブデータの親主キーが紐づくデータ</returns>
         public static List<Commons.LinqToObjectTest> JoinSample(List<Commons.LinqToObjectTest> src, List<Commons.LinqToObjectTest> srcSub)
         {
             return src.Join(srcSub, (srcItem) => srcItem.PrimaryKey, (subSrcItem) => subSrcItem.ParentPrimaryKey,
