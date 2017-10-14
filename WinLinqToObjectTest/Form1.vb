@@ -138,6 +138,26 @@ Public Class Form1
 
     End Sub
 
+    Private Sub runGroupJoinCS_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    ''' <summary>
+    ''' ジョインデータを表示
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub runJoinCS_Click(sender As Object, e As EventArgs) Handles runJoinCS.Click
+        ' 元データを取得
+        Dim srcMainData = DirectCast(Me.mainGrid.DataSource, List(Of LinqToObjectTest))
+
+        ' 元サブデータを取得
+        Dim srcSubData = DirectCast(Me.subGrid.DataSource, List(Of LinqToObjectTest))
+
+        ' ジョインデータを表示
+        Me.resultGrid.DataSource = LinqSampleCSharp.LinqToObjectSample.JoinSample(srcMainData, srcSubData)
+    End Sub
+
 #End Region
 
 End Class

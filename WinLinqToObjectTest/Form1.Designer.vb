@@ -37,6 +37,7 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.runOrderCS = New System.Windows.Forms.Button()
+        Me.runJoinCS = New System.Windows.Forms.Button()
         CType(Me.mainGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.subGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.resultGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -186,6 +187,15 @@ Partial Class Form1
         Me.runOrderCS.Text = "Order" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(主キーの降順)"
         Me.runOrderCS.UseVisualStyleBackColor = True
         '
+        'runJoinCS
+        '
+        Me.runJoinCS.Location = New System.Drawing.Point(696, 191)
+        Me.runJoinCS.Name = "runJoinCS"
+        Me.runJoinCS.Size = New System.Drawing.Size(118, 34)
+        Me.runJoinCS.TabIndex = 9
+        Me.runJoinCS.Text = "Join" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(内部結合)"
+        Me.runJoinCS.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -196,6 +206,7 @@ Partial Class Form1
         Me.Controls.Add(Me.runOrderCS)
         Me.Controls.Add(Me.runWhereCS)
         Me.Controls.Add(Me.runGroup)
+        Me.Controls.Add(Me.runJoinCS)
         Me.Controls.Add(Me.runJoin)
         Me.Controls.Add(Me.runGroupJoin)
         Me.Controls.Add(Me.runOrder)
@@ -234,4 +245,5 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents runOrderCS As Button
+    Friend WithEvents runJoinCS As Button
 End Class
