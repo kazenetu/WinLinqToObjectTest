@@ -30,5 +30,23 @@ namespace LinqSampleCSharp
         {
             return src.OrderByDescending((item) => item.PrimaryKey).ToList();
         }
+
+        /// <summary>
+        /// ジョイン(内部参照)のサンプル
+        /// </summary>
+        /// <param name="src">参照元データ</param>
+        /// <param name="srcSub">参照元サブデータ</param>
+        /// <returns>主キーの降順でソートされたデータ</returns>
+        public static List<Commons.LinqToObjectTest> JoinSample(List<Commons.LinqToObjectTest> src, List<Commons.LinqToObjectTest> srcSub)
+        {
+            return src.Join(srcSub, (srcItem) => srcItem.PrimaryKey, (subSrcItem) => subSrcItem.ParentPrimaryKey,
+                            (srcItem, subSrcItem) => 
+                                new Commons.LinqToObjectTest(
+                                    subSrcItem.PrimaryKey,
+                                    subSrcItem.DispleyOrder,
+                                    srcItem.DataName + ":" + subSrcItem.DataName,
+                                    subSrcItem.ParentPrimaryKey)
+                            ).ToList();
+        }
     }
 }
