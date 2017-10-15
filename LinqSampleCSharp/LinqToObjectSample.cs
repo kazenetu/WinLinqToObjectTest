@@ -67,5 +67,22 @@ namespace LinqSampleCSharp
                                 }
                             ).ToList();
         }
+
+        /// <summary>
+        /// グルーピングのサンプル
+        /// </summary>
+        /// <param name="src">参照元データ</param>
+        /// <returns>「主キー/10」でグループされたデータ</returns>
+        public static IEnumerable<Object> GroupSample(List<Commons.LinqToObjectTest> src)
+        {
+            return src.GroupBy((srcItem) => Math.Floor(srcItem.PrimaryKey / 10D),
+                            (srcItem, elements) =>
+                                new
+                                {
+                                    PrimaryKeyPer10 = srcItem.ToString(),
+                                    Count = elements.Count()
+                                }
+                            ).ToList();
+        }
     }
 }
