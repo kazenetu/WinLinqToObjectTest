@@ -171,6 +171,21 @@ Public Class Form1
         Me.resultGrid.DataSource = LinqSampleCSharp.LinqToObjectSample.JoinSample(srcMainData, srcSubData)
     End Sub
 
+    ''' <summary>
+    ''' グルーピングデータを表示
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub runGroupCS_Click(sender As Object, e As EventArgs) Handles runGroupCS.Click
+
+        ' 元データを取得
+        Dim srcMainData = DirectCast(Me.mainGrid.DataSource, List(Of LinqToObjectTest))
+
+        ' グルーピングデータを表示
+        Me.resultGrid.DataSource = LinqSampleCSharp.LinqToObjectSample.GroupSample(srcMainData)
+
+    End Sub
+
 #End Region
 
 End Class

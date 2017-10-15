@@ -39,6 +39,7 @@ Partial Class Form1
         Me.runOrderCS = New System.Windows.Forms.Button()
         Me.runJoinCS = New System.Windows.Forms.Button()
         Me.runGroupJoinCS = New System.Windows.Forms.Button()
+        Me.runGroupCS = New System.Windows.Forms.Button()
         CType(Me.mainGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.subGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.resultGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -206,6 +207,15 @@ Partial Class Form1
         Me.runGroupJoinCS.Text = "GroupJoin" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(外部結合)"
         Me.runGroupJoinCS.UseVisualStyleBackColor = True
         '
+        'runGroupCS
+        '
+        Me.runGroupCS.Location = New System.Drawing.Point(696, 246)
+        Me.runGroupCS.Name = "runGroupCS"
+        Me.runGroupCS.Size = New System.Drawing.Size(118, 34)
+        Me.runGroupCS.TabIndex = 10
+        Me.runGroupCS.Text = "Group" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(主キー/10)"
+        Me.runGroupCS.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -215,6 +225,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.runOrderCS)
         Me.Controls.Add(Me.runWhereCS)
+        Me.Controls.Add(Me.runGroupCS)
         Me.Controls.Add(Me.runGroup)
         Me.Controls.Add(Me.runJoinCS)
         Me.Controls.Add(Me.runJoin)
@@ -258,4 +269,5 @@ Partial Class Form1
     Friend WithEvents runOrderCS As Button
     Friend WithEvents runJoinCS As Button
     Friend WithEvents runGroupJoinCS As Button
+    Friend WithEvents runGroupCS As Button
 End Class
