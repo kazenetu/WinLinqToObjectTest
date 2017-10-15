@@ -48,5 +48,24 @@ namespace LinqSampleCSharp
                                     subSrcItem.ParentPrimaryKey)
                             ).ToList();
         }
+
+        /// <summary>
+        /// グループ(外部参照)のサンプル
+        /// </summary>
+        /// <param name="src">参照元データ</param>
+        /// <param name="srcSub">参照元サブデータ</param>
+        /// <returns>参照元データの主キーが参照元サブデータの親主キーに存在するか否かを追加したデータ</returns>
+        public static IEnumerable<Object> GroupJoinSample(List<Commons.LinqToObjectTest> src, List<Commons.LinqToObjectTest> srcSub)
+        {
+            return src.GroupJoin(srcSub, (srcItem) => srcItem.PrimaryKey, (subSrcItem) => subSrcItem.ParentPrimaryKey,
+                            (srcItem, subSrcItem) =>
+                                new {
+                                    PrimaryKey = srcItem.PrimaryKey,
+                                    DispleyOrder = srcItem.DispleyOrder,
+                                    DataName = srcItem.DataName,
+                                    existsSubItem = subSrcItem.Any()
+                                }
+                            ).ToList();
+        }
     }
 }
